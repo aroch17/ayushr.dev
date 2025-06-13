@@ -1,0 +1,56 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <a class="back-btn" href="/blog/">TODO: Add icon Go back</a>
+  <article class="blog-post">
+    <slot />
+  </article>
+</BaseLayout>
+
+<style is:global>
+  .back-btn {
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  .back-btn:hover {
+    opacity: 0.75;
+  }
+
+  .blog-post h1 {
+    color: var(--blue-primary);
+  }
+
+  .blog-post h3 {
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 0;
+  }
+
+  .blog-post h4 {
+    font-weight: 200;
+    margin: 0.25rem 0;
+  }
+
+  .blog-post pre {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .blog-post .word-emphasis {
+    color: black;
+    background-color: lightgray;
+    padding: 0.25rem;
+    border-radius: 3px;
+  }
+
+  .blog-post img {
+    width: 736px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+</style>

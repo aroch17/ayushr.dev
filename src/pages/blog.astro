@@ -1,9 +1,22 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogEntry from "../components/BlogEntry.astro"
 
-const pageTitle = "My Blog"
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+const pageTitle = "My Dev Journal"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>Blog</h1>
+  <h1>My Developer Journal</h1>
+  <ul>
+    {allPosts.map((post: any) => <li><BlogEntry post={post}/></li>)}
+  </ul>
 </BaseLayout>
+
+<style>
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+</style>
