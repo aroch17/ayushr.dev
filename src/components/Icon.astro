@@ -1,0 +1,38 @@
+---
+const {href, src, name, height, width, new_page, text} = Astro.props
+---
+
+<a href={href} target={new_page ? "_blank": "_self"}>
+  <div class="icon">
+    <img src={src} alt={name} width={width} height={height}/>
+    <p>{text}</p>
+  </div>
+</a>
+
+<style>
+  .icon {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    margin: 0.25rem;
+  }
+
+  .icon:hover {
+    opacity: 0.5;
+  }
+
+  p {
+    color: var(--black);
+    font-size: 1rem;
+  }
+
+	a {
+		margin: 0;
+	}
+
+  a::after {
+    position: unset;
+  }
+</style>
