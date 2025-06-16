@@ -1,4 +1,5 @@
 ---
+import ProjectEntry from "../components/ProjectEntry.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "My Projects"
@@ -6,4 +7,5 @@ const pageTitle = "My Projects"
 
 <BaseLayout pageTitle={pageTitle}>
 <h1>Projects</h1>
+<ProjectEntry name="Worldle Clone" src="../../public/images/wordle-clone.png" href="https://github.com/aroch17/wordle-clone" desc="This is a Wordle Clone created using React, Free Dictionary API (https://dictionaryapi.dev/) and Random word API (https://random-word-api.herokuapp.com/home)"/>
 </BaseLayout>
