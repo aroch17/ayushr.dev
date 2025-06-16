@@ -1,9 +1,9 @@
 ---
-const {href, src, name, height, width, new_page, text} = Astro.props
+const {href, src, name, height, width, new_page, text, animate} = Astro.props
 ---
 
 <a href={href} target={new_page ? "_blank": "_self"}>
-  <div class="icon">
+  <div class={animate ? "icon icon-animate" : "icon"}>
     <img src={src} alt={name} width={width} height={height}/>
     <p>{text}</p>
   </div>
@@ -13,11 +13,17 @@ const {href, src, name, height, width, new_page, text} = Astro.props
   .icon {
     display: flex;
     align-items: center;
-    transition: transform 0.05s linear, opacity 0.05s linear;
   }
 
   .icon:hover {
     opacity: 0.5;
+  }
+
+  .icon-animate {
+    transition: transform 0.05s linear, opacity 0.05s linear;
+  }
+
+  .icon-animate:hover {
     transform: rotate(10deg);
   }
   
