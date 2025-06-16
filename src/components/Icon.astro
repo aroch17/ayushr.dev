@@ -13,14 +13,16 @@ const {href, src, name, height, width, new_page, text} = Astro.props
   .icon {
     display: flex;
     align-items: center;
-  }
-
-  img {
-    margin: 0.25rem;
+    transition: transform 0.05s linear, opacity 0.05s linear;
   }
 
   .icon:hover {
     opacity: 0.5;
+    transform: rotate(10deg);
+  }
+  
+  img {
+    margin: 0.25rem;
   }
 
   p {
