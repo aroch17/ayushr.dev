@@ -1,11 +1,12 @@
 ---
+import Icon from "../components/Icon.astro";
 import BaseLayout from "./BaseLayout.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <a class="back-btn" href="/blog/">TODO: Add icon Go back</a>
+  <Icon href="/blog/" name="Go Back Icon" src="../icons/back-icon.png" height="15px" width="15px" text="Go back"/>
   <article class="blog-post">
     <slot />
   </article>
@@ -13,16 +14,21 @@ const { frontmatter } = Astro.props;
 
 <style is:global>
   .back-btn {
-    color: var(--black);
-    text-decoration: none;
+    display: flex;
+    align-items: center;
   }
 
-  .back-btn:hover {
-    opacity: 0.75;
+  .back-btn p {
+    margin: 0;
+  }
+
+  .back-btn img {
+    margin: 0;
   }
 
   .blog-post h1 {
     color: var(--blue-primary);
+    margin-top: 0;
   }
 
   .blog-post h3 {
@@ -49,7 +55,7 @@ const { frontmatter } = Astro.props;
   }
 
   .blog-post img {
-    width: 736px;
+    width: 100%;
     object-fit: contain;
     border-radius: 10px;
   }
