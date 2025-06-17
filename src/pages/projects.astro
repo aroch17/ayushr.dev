@@ -3,11 +3,14 @@ import ProjectEntry from "../components/ProjectEntry.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "My Projects"
+const hackathonDesc = "Hackathons? Hacked. Won 'Most Creative Use of Machine Learning' at HackTheBurgh 2023. Our team built a software to locate and identify endangered animals."
+const httpDesc = "Are you even a systems engineer if you haven't built an HTTP server in C? This one's mine. Featuring non-blocking I/0, constant time polling, and file streaming - this one was a blast."
+const wordleDesc="Inspired by how simple yet brilliant Wordle was, I set out to build it on my own. The result was a React project featuring integrations with a Dictionary API and a Random Word Generator. Super quick and fun project!"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 <h1>Projects</h1>
-<ProjectEntry name="Tracking and Mapping Endangered Species" src="../images/heatmap-preview.png" href="https://github.com/pat2903/Hack-The-Burgh-2023" desc="TODO"/>
-<ProjectEntry name="HTTP Server" src="../images/http-server-img.png" href="https://github.com/aroch17/http-server" desc="TODO"/>
-<ProjectEntry name="Worldle Clone" src="../images/wordle-clone.png" href="https://github.com/aroch17/wordle-clone" desc="TODO"/>
+<ProjectEntry name="Tracking and Mapping Endangered Species" src="../images/heatmap-preview.png" href="https://github.com/pat2903/Hack-The-Burgh-2023" desc={hackathonDesc}/>
+<ProjectEntry name="HTTP Server" src="../images/http-server-img.png" href="https://github.com/aroch17/http-server" desc={httpDesc}/>
+<ProjectEntry name="Worldle Clone" src="../images/wordle-clone.png" href="https://github.com/aroch17/wordle-clone" desc={wordleDesc}/>
 </BaseLayout>
