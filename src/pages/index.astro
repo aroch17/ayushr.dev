@@ -1,12 +1,17 @@
 ---
+import BlogEntry from "../components/BlogEntry.astro";
 import Intro from "../components/Intro.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
+const pathTraversalPost = Object.values(import.meta.glob('./posts/path-traversal-vulnerability.md', { eager: true }))[0];
 const pageTitle = "Home"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<Intro />
 	<!-- Add featured section -->
+	 <hr>
+	 <h2>Featured</h2>
+	 <BlogEntry post={pathTraversalPost}/>
 </BaseLayout>
 
