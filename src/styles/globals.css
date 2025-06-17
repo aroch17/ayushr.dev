@@ -20,6 +20,7 @@ body {
   margin: 0 auto;
   width: 100%;
   max-width: 768px;
+  line-height: 1.25;
 }
 
 hr {
