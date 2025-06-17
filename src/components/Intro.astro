@@ -4,12 +4,10 @@ import Icon from "./Icon.astro";
 ---
 
 <h1>Hey There! <span style='font-size:45px;'>&#128075;</span></h1>
-<p class="desc">I am a Computer Science student with a strong foundation in full-stack development, systems programming, and
-  collaborative problem-solving skills, proven through successful implementation of complex systems including Linux kernel
-  modules and real-time data applications.</p>
-<p>You can read my dev journal <a href="/blog/">here</a> or check out my <a href="/projects/">previous projects</a> here.</p>
+<p class="desc">I am a full-stack software developer with an interest in System Design and Security.</p>
+<p>You can learn more about me <a href="/about/">here</a>, or read my <a href="/blog/">dev journal</a> or check out my <a href="/projects/">previous projects</a>.</p>
 <div class="icons-bar">
-	<p>I'd love to connect!</p>
+	<p>I'm always up for a chat! Connect with me here:</p>
 	<Icon href="https://github.com/aroch17" name="Github Icon" src="../icons/github-icon.png" height="35px" width="35px" new_page="true" animate="true"/>
 	<Icon href="https://www.linkedin.com/in/ayush-rochlani/" name="LinkedIn Icon" src="../icons/linkedin-icon.png" height="30px" width="30px" new_page="true" animate="true"/>
 	<Icon href="mailto:ayushrochlani0405@gmail.com" name="Email Icon" src="../icons/email-icon.png" height="35px" width="35px" new_page="true" animate="true"/>
@@ -24,6 +22,7 @@ import Icon from "./Icon.astro";
 	p {
 		font-size: 1.25rem;
 		line-height: 1.25;
+		margin: 0;
 	}
 
   .desc {
@@ -33,5 +32,9 @@ import Icon from "./Icon.astro";
 	.icons-bar {
 		display: flex;
 		align-items: center;
+	}
+
+	a {
+		margin: 0;
 	}
 </style>
