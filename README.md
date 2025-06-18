@@ -45,3 +45,19 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+
+Linkedin - <a href="https://www.flaticon.com/free-icons/email" title="email icons">Email icons created by Freepik - Flaticon</a>
+Github - <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by -Artist - Flaticon</a>
+Email - <a href="https://www.flaticon.com/free-icons/email" title="email icons">Email icons created by Anggara - Flaticon</a>
+Go back - <a href="https://www.flaticon.com/free-icons/go-back" title="go back icons">Go back icons created by See Icons - Flaticon</a>
+
+TODO: 
+[] Populate About Page
+
+[x] Add README for HTTP Server
+[] Add tests for HTTP Server
+[] Write Blog Post about HTTP Server
+
+[] Multiplayer Wordle
+[] Write Blog Post about Multiplayer Wordle
