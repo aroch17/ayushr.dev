@@ -6,7 +6,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-  <Icon href="/blog/" name="Go Back Icon" src="../icons/back-icon.png" height="15px" width="15px" text="Go back"/>
+  <Icon href="/blog/" name="Go Back Icon" src="../../icons/back-icon.png" height="15px" width="15px" text="Go back"/>
   <article class="blog-post">
     <slot />
   </article>
