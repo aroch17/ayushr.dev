@@ -1,9 +1,89 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
 
 const pageTitle = "About Me"
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>About</h1>
+  <h1>About Me</h1>
+  <div class="about-section">
+    <div class="image">
+      <img src="../../images/about_me_pic.jpg" alt="Profile Pic" class="profile-img">
+    </div>
+    <div class="text">
+      <p>Hey! My name is Ayush Rochlani and I am a Computer Science Major at the University of Edinburgh.</p>
+      <p>From creating real-time mobile applications to developing Linux kernel modules, I enjoy tackling complex technical challenges.</p>
+      <div class="icons-bar">
+        <p>I'd love to connect!</p>
+        <Icon href="https://github.com/aroch17" name="Github Icon" src="../icons/github-icon.png" height="30px" width="30px" new_page="true" animate="true"/>
+        <Icon href="https://www.linkedin.com/in/ayush-rochlani/" name="LinkedIn Icon" src="../icons/linkedin-icon.png" height="25px" width="25px" new_page="true" animate="true"/>
+        <Icon href="mailto:ayushrochlani0405@gmail.com" name="Email Icon" src="../icons/email-icon.png" height="30px" width="30px" new_page="true" animate="true"/>
+      </div>
+      <div class="resume-preview">
+        <a href="../../Ayush_Rochlani_CV.pdf" target="_blank" rel="noopener noreferrer">
+          <img src="../../public/images/resume-preview.png" alt="Resume Preview" class="resume-thumbnail">
+          <p>View Resume</p>
+        </a>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
+
+<style>
+  .about-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .profile-img {
+    height: 300px;
+    border-radius: 100%;
+    margin: 5px 30px;
+  }
+
+  a {
+    color: var(--black);
+    font-size: inherit;
+  }
+
+  a::after {
+    position: unset;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p {
+    font-size: 1.15rem;
+    margin: 0 0 5px 0;
+  }
+
+  .resume-preview {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+
+  .resume-preview:hover {
+    transform: scale(1.05);
+  }
+
+  .resume-thumbnail {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 4px;
+  }
+
+  .icons-bar {
+		display: flex;
+		align-items: center;
+	}
+</style>
