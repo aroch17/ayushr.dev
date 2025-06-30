@@ -3,7 +3,7 @@ import Icon from "./Icon.astro";
 
 ---
 
-<h1>Hey There! <span style='font-size:45px;'>&#128075;</span></h1>
+<h1>Hey There! <span>&#128075;</span></h1>
 <p class="desc">I am a full-stack software developer with an interest in System Design and Security.</p>
 <p>You can learn more about me <a href="/about/">here</a>, or read my <a href="/blog/">dev journal</a> or check out my <a href="/projects/">previous projects</a>.</p>
 <div class="icons-bar">
@@ -38,9 +38,17 @@ import Icon from "./Icon.astro";
 		margin: 0;
 	}
 
+	span {
+		font-size: 45px;
+	}
+
 	@media screen and (max-width:425px) {
 		h1 {
 			font-size: 1.5rem;
+		}
+
+		span {
+			font-size: 25px;
 		}
 
 		p, a {
