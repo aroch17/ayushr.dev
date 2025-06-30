@@ -1,8 +1,8 @@
 ---
-const {href, src, name, height, width, new_page, text, animate, resize} = Astro.props
+const {href, src, id, name, height, width, new_page, text, animate, resize} = Astro.props
 ---
 
-<a href={href} target={new_page ? "_blank": "_self"}>
+<a id={id ? id : ""} href={href} target={new_page ? "_blank": "_self"}>
   <div class={animate ? "icon icon-animate" : "icon"}>
     <img src={src} alt={name} width={width} height={height} class={resize ? "resize" : ""}/>
     <p>{text}</p>
