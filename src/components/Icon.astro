@@ -1,10 +1,10 @@
 ---
-const {href, src, name, height, width, new_page, text, animate} = Astro.props
+const {href, src, id, name, height, width, new_page, text, animate, resize} = Astro.props
 ---
 
-<a href={href} target={new_page ? "_blank": "_self"}>
+<a id={id ? id : ""} href={href} target={new_page ? "_blank": "_self"}>
   <div class={animate ? "icon icon-animate" : "icon"}>
-    <img src={src} alt={name} width={width} height={height}/>
+    <img src={src} alt={name} width={width} height={height} class={resize ? "resize" : ""}/>
     <p>{text}</p>
   </div>
 </a>
@@ -42,5 +42,12 @@ const {href, src, name, height, width, new_page, text, animate} = Astro.props
 
   a::after {
     position: unset;
+  }
+
+  @media screen and (max-width: 425px) {
+    .resize {
+      width: 20px;
+      height: 20px;
+    }
   }
 </style>
