@@ -34,4 +34,14 @@ const {name, src, href, desc} = Astro.props
     margin: 0 1rem;
     font-size: 1rem;
   }
+
+  @media screen and (max-width: 425px) {
+    a {
+      font-size: 1.25rem;
+    }
+
+    p {
+      font-size: 0.75rem;
+    }
+  }
 </style>

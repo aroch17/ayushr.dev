@@ -1,10 +1,24 @@
 ---
-import Navigation from "./Navigation.astro";
+import Icon from "./Icon.astro";
 ---
 
 <div class="header">
   <a href="/" class="head-title">AyushR.dev</a>
-  <Navigation />
+  <nav>
+    <div class="nav-links">
+      <a href="/projects/">Projects</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About</a>
+    </div>
+    <div class="nav-hamburger">
+      <Icon id="dropdown" name="Dropdown Icon" src="../icons/dropdown-icon.png" height="30px" width="30px"/>
+    </div>
+  </nav>
+</div>
+<div id="hamburger-items" class="hamburger-items">
+  <a href="/projects/">Projects</a>
+  <a href="/blog/">Blog</a>
+  <a href="/about/">About</a>
 </div>
 <hr>
 
@@ -12,6 +26,7 @@ import Navigation from "./Navigation.astro";
   .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .head-title {
@@ -24,5 +39,73 @@ import Navigation from "./Navigation.astro";
   a::after {
     background-color: var(--black);
   }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+  }
+
+  .nav-hamburger {
+    display: none;
+  }
+
+  .hamburger-items {
+    display: none;
+  }
+
+  a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
+
+  a::after {
+    position: unset;
+  }
+
+  a:hover {
+    color: var(--blue-primary);
+  }
+
+  @media screen and (max-width: 485px) {
+    .nav-links {
+      display: none;
+    }
+
+    .nav-hamburger {
+      display: inline;
+      cursor: pointer;
+    }
+
+    .hamburger-items {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .visible {
+      display: flex;
+    }
+
+    a {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .head-title {
+      font-size: 1.75rem;
+    }
+  }
 </style>
+
+<script>
+  const dropdownMenu = document.getElementById("dropdown");
+  const itemList = document.getElementById("hamburger-items")
+
+  dropdownMenu?.addEventListener("click", () => {
+    itemList?.classList.toggle("visible")
+  })
+</script>
 

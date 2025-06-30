@@ -16,9 +16,9 @@ const pageTitle = "About Me"
       <p>From creating real-time mobile applications to developing Linux kernel modules, I enjoy tackling complex technical challenges.</p>
       <div class="icons-bar">
         <p>I'd love to connect!</p>
-        <Icon href="https://github.com/aroch17" name="Github Icon" src="../icons/github-icon.png" height="30px" width="30px" new_page="true" animate="true"/>
-        <Icon href="https://www.linkedin.com/in/ayush-rochlani/" name="LinkedIn Icon" src="../icons/linkedin-icon.png" height="25px" width="25px" new_page="true" animate="true"/>
-        <Icon href="mailto:ayushrochlani0405@gmail.com" name="Email Icon" src="../icons/email-icon.png" height="30px" width="30px" new_page="true" animate="true"/>
+        <Icon href="https://github.com/aroch17" name="Github Icon" src="../icons/github-icon.png" height="30px" width="30px" new_page="true" animate="true" resize="true"/>
+        <Icon href="https://www.linkedin.com/in/ayush-rochlani/" name="LinkedIn Icon" src="../icons/linkedin-icon.png" height="25px" width="25px" new_page="true" animate="true" resize="true"/>
+        <Icon href="mailto:ayushrochlani0405@gmail.com" name="Email Icon" src="../icons/email-icon.png" height="30px" width="30px" new_page="true" animate="true" resize="true"/>
       </div>
       <div class="resume-preview-container">
         <a href="../../Ayush_Rochlani_CV.pdf" target="_blank" rel="noopener noreferrer" class="resume-preview">
@@ -88,4 +88,23 @@ const pageTitle = "About Me"
 		display: flex;
 		align-items: center;
 	}
+
+  @media screen and (max-width: 425px) {
+    .about-section {
+      flex-direction: column;
+    }
+
+    p {
+      font-size: 0.75rem;
+    }
+
+    .profile-img {
+      height: 150px;
+    }
+
+    .resume-thumbnail {
+      width: 50px;
+      height: 100px;
+    }
+  }
 </style>
